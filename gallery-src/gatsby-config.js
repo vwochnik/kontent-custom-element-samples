@@ -2,13 +2,13 @@ module.exports = {
   siteMetadata: {
     author: `Ondřej Chrastina`,
     title: `Custom Elements`,
-    description: `Samples of the HTML web pages that can be used as Custom Element Extensions in Kentico Cloud. Custom elements help you with extending the basic functionality of Kentico Cloud UI and thus improving the content editing experience. Custom element is essentially a small HTML application that exists in a sandboxed <iframe> and interacts with the Kentico Cloud app via the Custom Elements API.`,
-    siteUrl: `https://kentico.github.io/custom-element-samples/gallery`,
+    description: `Samples of the HTML web pages that can be used as Custom Elements in Kentico Kontent. Custom elements help you with extending the basic functionality of Kentico Kontent UI and thus improving the content editing experience. Custom element is essentially a small HTML application that exists in a sandboxed <iframe> and interacts with the Kentico Kontent app via the Custom Elements API.`,
+    siteUrl: `https://kentico.github.io/kontent-custom-element-samples/gallery`,
     social: {
       twitter: `ChrastinaOndrej`,
     },
   },
-  pathPrefix: `/custom-element-samples/gallery`,
+  pathPrefix: `/kontent-custom-element-samples/gallery`,
   plugins: [
     {
       resolve: `gatsby-transformer-json`,
@@ -46,7 +46,7 @@ module.exports = {
         background_color: `#1E88E5`,
         theme_color: `#1E88E5`,
         display: `minimal-ui`,
-        icon: `content/assets/kenticocloud-icon.png`,
+        icon: `content/assets/kenticokontent-icon.png`,
       },
     },
     `gatsby-plugin-offline`,

@@ -1,6 +1,6 @@
 {
   "title": "Syntax Highlighter",
   "description": "Syntax Highlighter is an editable text area enhanced by the Ace Code Editor to provide a programmer-friendly environment for writing code examples. Offers a fine selection of programming languages to be highlighted.",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/SyntaxHighlighter/example.png",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/SyntaxHighlighter"
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/SyntaxHighlighter/example.png",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/SyntaxHighlighter"
 }

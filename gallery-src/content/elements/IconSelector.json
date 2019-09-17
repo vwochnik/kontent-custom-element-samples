@@ -1,6 +1,6 @@
 {
   "title": "Icon Selector",
-  "description": "In Kentico Cloud, an icon selector can be specified by using the `Multiple Choice` content element. But this lacks in usability as the content author has to guess what icon will be displayed when a particular choice is made. The icon selector hopes to make the life of the content editor easier with an easy to use dropdown of icons.",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/IconSelector/demo/icon-selector-ui.jpg",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/IconSelector"
+  "description": "In Kentico Kontent, an icon selector can be specified by using the `Multiple Choice` content element. But this lacks in usability as the content author has to guess what icon will be displayed when a particular choice is made. The icon selector hopes to make the life of the content editor easier with an easy to use dropdown of icons.",
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/IconSelector/demo/icon-selector-ui.jpg",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/IconSelector"
 }

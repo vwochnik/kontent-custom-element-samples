@@ -2,5 +2,5 @@
   "title": "Unique textbox",
   "description": "This custom element check whether your entered value is unique across all items in your project in specified element.",
   "thumbnailUrl": "https://amend.cz/unique_element.gif",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/UniqueTextbox"
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/UniqueTextbox"
 }

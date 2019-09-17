@@ -5,15 +5,15 @@ Syntax Highlighter is an editable text area enhanced by the [Ace Code Editor](ht
 
 ## Usage
 
-If you want to use the Syntax Highlighter in your project in Kentico Cloud, follow these steps:
+If you want to use the Syntax Highlighter in your project in Kentico Kontent, follow these steps:
 
 * Host the Syntax Highlighter code on you end considering [the Kentico recommendations](https://developer.kenticocloud.com/docs/integrating-content-editing-features)
-* In Kentico Cloud open Content types tab
+* In Kentico Kontent open Content types tab
 * Open / create a content model to which you want to add the Syntax Highlighter
 * Add **Custom element** content element
 * Open configuration of the content element
 * Use absolute URL of the index.html file hosted on your end as Hosted code URL (HTTPS)
-  * For testing purposes it is possible to use https://kentico.github.io/custom-element-samples/SyntaxHighlighter/index.html
+  * For testing purposes it is possible to use https://kentico.github.io/kontent-custom-element-samples/SyntaxHighlighter/index.html
 * Optional: Provide the following JSON parameters for the custom element to configure the initial state of the Syntax Highlighter
 
 ```json
@@ -28,11 +28,11 @@ If you want to use the Syntax Highlighter in your project in Kentico Cloud, foll
 
 ## Obtaining value
 
-The value contains data about language and code. As Kentico Cloud custom elements can contain only `string` values or `null`, the value is stored as a stringified object. That means the value has to be explicitly parsed. 
+The value contains data about language and code. As Kentico Kontent custom elements can contain only `string` values or `null`, the value is stored as a stringified object. That means the value has to be explicitly parsed.
 
 ### Example
 
-The value contains the following string when obtained from Kentico Cloud:
+The value contains the following string when obtained from Kentico Kontent:
 ```
 "{\"language\":\"javascript\",\"code\":\"var text = 'Hello world';\"}"
 ```
@@ -47,4 +47,4 @@ Syntax Highlighter source code is in the following repository: https://github.co
 Syntax Highlighter is released under the MIT license.
 The Ace source code that Syntax Highlighter uses is released under the BSD license.
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/custom-element-samples/SyntaxHighlighter?pixel)
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kontent-custom-element-samples/SyntaxHighlighter?pixel)

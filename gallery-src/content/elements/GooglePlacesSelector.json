@@ -1,6 +1,6 @@
 {
   "title": "Google Places Geo-location Selector",
-  "description": "This is a custom element for Kentico Cloud that allows users to easily get the geo-coordinates for a location using the Google Places API.",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/GooglePlacesSearch/screenshot.png",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/GooglePlacesSearch"
+  "description": "This is a custom element for Kentico Kontent that allows users to easily get the geo-coordinates for a location using the Google Places API.",
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/GooglePlacesSearch/screenshot.png",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/GooglePlacesSearch"
 }

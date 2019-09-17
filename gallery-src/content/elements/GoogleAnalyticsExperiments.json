@@ -1,6 +1,6 @@
 {
   "title": "Google Analytics Experiments selector",
   "description": "Google Analytics Experiments selector allows users to select an experiment and its variant from Google Analytics.",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/GoogleAnalyticsExperiments/ExperimentSelector.gif",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/GoogleAnalyticsExperiments"
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/GoogleAnalyticsExperiments/ExperimentSelector.gif",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/GoogleAnalyticsExperiments"
 }

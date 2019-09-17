@@ -1,6 +1,6 @@
 {
   "title": "Unsplash Images Selector",
-  "description": "This is a custom element for Kentico Cloud that allows users to search and select high-quality, royalty-free images from Unsplash.",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/UnsplashSelector/Unsplash-Selector-Fade.jpg",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/UnsplashSelector"
+  "description": "This is a custom element for Kentico Kontent that allows users to search and select high-quality, royalty-free images from Unsplash.",
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/UnsplashSelector/Unsplash-Selector-Fade.jpg",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/UnsplashSelector"
 }

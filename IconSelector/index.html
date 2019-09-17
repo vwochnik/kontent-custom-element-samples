@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Icon Selector</title>    
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">    
+    <title>Icon Selector</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="custom-element.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
     <!-- Kentico Custom elements API-->
-    <script src="https://app.kenticocloud.com/js-api/custom-element.js"></script>
+    <script src="https://app.kontent.ai/js-api/custom-element.js"></script>
     <style>
     body {
         margin: 0;
@@ -47,9 +47,9 @@
 </head>
 
 <body>
-    <div class="custom-icon-selector-container">        
+    <div class="custom-icon-selector-container">
         <div class="item-status item-status--failed hidden">
-            The input configuration specified for this component is either incorrect or empty. Please check the documentation found <a href="https://github.com/Kentico/custom-element-samples/blob/master/IconSelector/README.md" target="_blank">here</a>.
+            The input configuration specified for this component is either incorrect or empty. Please check the documentation found <a href="https://github.com/Kentico/kontent-custom-element-samples/blob/master/IconSelector/README.md" target="_blank">here</a>.
         </div>
         <div class="icon selected" id="selectedSvg"></div>
         <select name="icons" id="icons">
@@ -60,7 +60,7 @@
 
     <!-- Custom element code -->
     <script>
-        var isDisabled = false;        
+        var isDisabled = false;
         var iconOptions = $("#icons");
 
         function showConfigError() {
@@ -128,7 +128,7 @@
                         catch(err)
                         {
                             console.log("Selected value is: " + data.item.value);
-                        }                        
+                        }
                     }
                     if (data.item.value) {
                         $("#selectedSvg").attr("style", getStyle(data.item.element.attr("data-icon-src")));
@@ -189,12 +189,12 @@
                         options: [{
                             label: "Architect",
                             value: "architect",
-                            icon: "https://kentico.github.io/custom-element-samples/IconSelector/samples/osa_user_green_architect.svg"
+                            icon: "https://kentico.github.io/kontent-custom-element-samples/IconSelector/samples/osa_user_green_architect.svg"
                         },
                         {
                             label: "Project Manager",
                             value: "projectManager",
-                            icon: "https://kentico.github.io/custom-element-samples/IconSelector/samples/osa_user_green_project_manager.svg"
+                            icon: "https://kentico.github.io/kontent-custom-element-samples/IconSelector/samples/osa_user_green_project_manager.svg"
                         }]
                     }
                 };
@@ -207,7 +207,7 @@
                     setupIconSelector(element);
                     updateDisabled(element.disabled);
                 }
-                
+
             }
         }
 
@@ -217,10 +217,10 @@
 
         function isValidConfig(element)
         {
-            var validConfig = false;            
+            var validConfig = false;
 
-            if (element.config) {                
-                if (element.config.controlLabel && element.config.options) 
+            if (element.config) {
+                if (element.config.controlLabel && element.config.options)
                 {
                     for(var option of element.config.options)
                     {
@@ -233,9 +233,9 @@
                             validConfig = false;
                             break;
                         }
-                    }                 
-                }                
-            }           
+                    }
+                }
+            }
 
             return validConfig;
         }

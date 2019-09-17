@@ -1,6 +1,6 @@
 {
   "title": "WYSIWYG TinyMCE",
-  "description": "This Kentico Cloud custom element is based on the TinyMCE WYSIWYG text editor.",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/WYSIWYG-TinyMCE/tiny-preview.png",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/WYSIWYG-TinyMCE"
+  "description": "This Kentico Kontent custom element is based on the TinyMCE WYSIWYG text editor.",
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/WYSIWYG-TinyMCE/tiny-preview.png",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/WYSIWYG-TinyMCE"
 }

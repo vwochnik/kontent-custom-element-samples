@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="./custom-element.min.css">
 
     <!-- Kentico Custom elements API-->
-    <script src="https://app.kenticocloud.com/js-api/custom-element.js"></script>
+    <script src="https://app.kontent.ai/js-api/custom-element.js"></script>
 
     <!-- Custom elements styles -->
     <style>
@@ -129,10 +129,10 @@
 
             /*Clean all empty parameters and generate querystring for api call*/
             for (key in params)
-                if (isEmpty(params[key])) 
-                    delete params[key]; 
+                if (isEmpty(params[key]))
+                    delete params[key];
             var queryString = $.param(params);
-      
+
             $.ajax({
                 url: "https://api.cognitive.microsoft.com/bing/v7.0/images/search?" + queryString,
                     beforeSend: function(xhrObj){

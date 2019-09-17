@@ -4,27 +4,27 @@
     {
       "label": "Firewall",
       "value": "firewall",
-      "icon": "https://kentico.github.io/custom-element-samples/IconSelector/samples/osa_firewall.svg"
+      "icon": "https://kentico.github.io/kontent-custom-element-samples/IconSelector/samples/osa_firewall.svg"
     },
     {
       "label": "Home",
       "value": "home",
-      "icon": "https://kentico.github.io/custom-element-samples/IconSelector/samples/osa_home.svg"
+      "icon": "https://kentico.github.io/kontent-custom-element-samples/IconSelector/samples/osa_home.svg"
     },
     {
       "label": "Architect",
       "value": "architect",
-      "icon": "https://kentico.github.io/custom-element-samples/IconSelector/samples/osa_user_green_architect.svg"
+      "icon": "https://kentico.github.io/kontent-custom-element-samples/IconSelector/samples/osa_user_green_architect.svg"
     },
     {
       "label": "Project Manager",
       "value": "projectManager",
-      "icon": "https://kentico.github.io/custom-element-samples/IconSelector/samples/osa_user_green_project_manager.svg"
+      "icon": "https://kentico.github.io/kontent-custom-element-samples/IconSelector/samples/osa_user_green_project_manager.svg"
     },
     {
       "label": "Security Specialist",
       "value": "security-specialist",
-      "icon": "https://kentico.github.io/custom-element-samples/IconSelector/samples/osa_user_blue_security_specialist.svg"
+      "icon": "https://kentico.github.io/kontent-custom-element-samples/IconSelector/samples/osa_user_blue_security_specialist.svg"
     }
   ]
 }

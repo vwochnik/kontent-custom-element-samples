@@ -2,5 +2,5 @@
   "title": "Image transformer",
   "description": "This custom element functions similarly to the Asset element, but allows an editor to apply the Image Transformation API to any selected image.",
   "thumbnailUrl": "https://user-images.githubusercontent.com/34716163/55026851-35778180-4fda-11e9-878f-f790ed4bedb3.gif",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/ImageTransformer"
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/ImageTransformer"
 }

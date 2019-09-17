@@ -1,6 +1,6 @@
 {
   "title": "Bynder Image Selector",
   "description": "The Bynder Image Selector allows to search images in Bynder DAM and use them in your website.",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/Bynder/BynderImageSelector.gif",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/Bynder"
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/Bynder/BynderImageSelector.gif",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/Bynder"
 }

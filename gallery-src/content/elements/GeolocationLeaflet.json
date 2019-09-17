@@ -2,5 +2,5 @@
   "title": "Geolocation Leaflet",
   "description": "This KC custom element allows you to put a marker on a map and it automatically gets converted to latitude and longitude geo locations.",
   "thumbnailUrl": "https://amend.cz/geolocation/geolocation2.png",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/Geolocation-Leaflet"
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/Geolocation-Leaflet"
 }

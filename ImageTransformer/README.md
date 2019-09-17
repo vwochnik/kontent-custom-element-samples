@@ -4,8 +4,8 @@
 This custom element functions similarly to the **Asset** element, but allows an editor to apply the Image Transformation API to any selected image.
 
 Confused?
-- What is Kentico Cloud: [Get started with Kentico Cloud](https://docs.kenticocloud.com/tutorials/get-started-with-kentico-cloud)
-- What is a custom element: [Integrating your own content editing features](https://developer.kenticocloud.com/docs/integrating-content-editing-features)
+- What is Kentico Kontent: [Get started with Kentico Kontent](https://docs.kontent.ai/tutorials/develop-apps/get-started/hello-world-in-5-minutes)
+- What is a custom element: [Integrating your own content editing features](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features)
 
 In action:
 ![ElementInAction](https://user-images.githubusercontent.com/34716163/55026851-35778180-4fda-11e9-878f-f790ed4bedb3.gif)
@@ -16,7 +16,7 @@ In action:
 1. Create or use an existing content type.
 1. Drag in **Custom element** from the tray on the right.
 1. In the element configuration, provide these values:
-   - **Hosted code URL (HTTPS)**: `https://kentico.github.io/custom-element-samples/ImageTransformer/element.html`
+   - **Hosted code URL (HTTPS)**: `https://kentico.github.io/kontent-custom-element-samples/ImageTransformer/element.html`
    - **Parameters {JSON}**:
      ```
      {
@@ -27,10 +27,10 @@ In action:
         "colorPickerDefaultColors": <Optional: Array of default colors like ["#RRGGBBAA", "#4caf50", ...]>
      }
      ```
-   * To set up `listAssetsEndpoint` above, please follow [Working with sensitive data in custom elements](https://docs.kenticocloud.com/tutorials/develop-apps/integrate/working-with-sensitive-data-in-custom-elements).
+   * To set up `listAssetsEndpoint` above, please follow [Working with sensitive data in custom elements](https://docs.kontent.ai/tutorials/develop-apps/integrate/working-with-sensitive-data-in-custom-elements).
      - In **Step 2: Configuring your Lambda function**, use the following keys and values in the **Environment variables** section:
        - `BEARER_TOKEN`: `<Content Management API key from your project (Project settings > API keys)>`
-       - `HOST`: `manage.kenticocloud.com`
+       - `HOST`: `manage.kontent.ai`
        - `PATH`: `/v2/projects/<Project ID from your project (Project settings > API keys)>/assets`
 1. Make sure to have some image assets.
 1. Create a new item using this content type.
@@ -108,4 +108,4 @@ That can be parsed into this JSON:
 ## Want to see the source?
 Here it is: [TransformedImagesElement](https://github.com/yuriys-kentico/TransformedImagesElement)
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/custom-element-samples/ImageTransformer?pixel)
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kontent-custom-element-samples/ImageTransformer?pixel)

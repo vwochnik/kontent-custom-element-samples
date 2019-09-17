@@ -1,5 +1,5 @@
 # Request repeater
-RequestRepeater is simple AWS Lambda node.js script which repeats GET request (copies querystring and headers) and adds authorization header. This utility bypasses browsers' CORS policy as well as provide a safe place for storing sensitive data such as credentials or tokens. 
+RequestRepeater is simple AWS Lambda node.js script which repeats GET request (copies querystring and headers) and adds authorization header. This utility bypasses browsers' CORS policy as well as provide a safe place for storing sensitive data such as credentials or tokens.
 
 # Usage
 
@@ -28,4 +28,4 @@ Example environment variable key-value pair (without quotation marks):
 "PASSWORD" : "easterEgg"
 ```
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/custom-element-samples/RequestRepeater?pixel)
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kontent-custom-element-samples/RequestRepeater?pixel)

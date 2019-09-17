@@ -1,10 +1,10 @@
 {
-  "name": "custom-elements-samples-gallery",
-  "description": "A gallery listing the samples of custom elements for Kentico Cloud.",
-  "version": "1.0.9",
+  "name": "kontent-custom-elements-samples-gallery",
+  "description": "A gallery listing the samples of custom elements for Kentico Kontent.",
+  "version": "2.0.1",
   "author": "Ondřej Chrastina <chrastina.ondra@gmail.com> (https://github.com/Simply007)",
   "bugs": {
-    "url": "https://github.com/Kentico/custom-element-samples/issues"
+    "url": "https://github.com/Kentico/kontent-custom-element-samples/issues"
   },
   "dependencies": {
     "gatsby": "^2.3.29",
@@ -32,7 +32,7 @@
     "cpx": "^1.5.0",
     "prettier": "^1.17.0"
   },
-  "homepage": "https://github.com/Kentico/custom-element-samples#readme",
+  "homepage": "https://github.com/Kentico/kontent-custom-element-samples#readme",
   "keywords": [
     "gatsby"
   ],
@@ -40,7 +40,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kentico/custom-element-samples.git"
+    "url": "git+https://github.com/Kentico/kontent-custom-element-samples.git"
   },
   "scripts": {
     "build": "gatsby build --prefix-paths && cpx -v \"public/**/*\" ../gallery",

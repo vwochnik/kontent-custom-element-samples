@@ -1,6 +1,6 @@
 {
   "title": "Bing Image Picker",
   "description": "The Bing image picker allows to search images on Bing and use them in your website.",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/BingImagePicker/BingImagePicker.gif",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/BingImagePicker"
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/BingImagePicker/BingImagePicker.gif",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/BingImagePicker"
 }

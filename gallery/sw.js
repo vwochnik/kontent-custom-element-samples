@@ -26,26 +26,26 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-fe3198609c7862239a1a.js"
+    "url": "webpack-runtime-66172d4fb1e0b880467d.js"
   },
   {
-    "url": "styles.8289dcaa2473637ecfd2.css"
+    "url": "styles.b482f24de80c64c61587.css"
   },
   {
     "url": "styles-ad9325a5a968f2e436bc.js"
   },
   {
-    "url": "app-fe198c650045002d919f.js"
+    "url": "app-5dfd73b8cc7202e29027.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-78f9e4dea04737fa062d.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "ca897401ee774ce038c7933f7fa5de42"
+    "revision": "419aa0390431a59ea82ef640013fdd1c"
   },
   {
-    "url": "component---src-pages-404-js-f8742a0abd05955f3237.js"
+    "url": "component---src-pages-404-js-aa8025e0cb63ac64d9fe.js"
   },
   {
     "url": "0-efbea40f85a1eb450257.js"
@@ -58,7 +58,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "115eb5110b214456b7c70d1f8736ff05"
+    "revision": "642561d80c1273ed963282a6936f7dce"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -79,7 +79,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/custom-element-samples/gallery/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/kontent-custom-element-samples/gallery/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -151,7 +151,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/custom-element-samples/gallery${pathname}`
+        return `/kontent-custom-element-samples/gallery${pathname}`
       } else {
         return pathname
       }

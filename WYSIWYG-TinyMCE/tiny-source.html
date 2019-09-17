@@ -8,7 +8,7 @@
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
     <!-- Kentico Custom elements API-->
-    <script src="https://app.kenticocloud.com/js-api/custom-element.js"></script>
+    <script src="https://app.kontent.ai/js-api/custom-element.js"></script>
 
     <!-- Custom elements styles -->
     <style>
@@ -26,7 +26,7 @@
 
     <!-- Custom element code -->
     <script type="text/javascript">
-        
+
         var config = {
             heightInPx: 500
         };
@@ -61,7 +61,7 @@
                 toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
                 tinycomments_mode: 'embedded',
                 setup: function (editor) {
-                    // updates Kentico Cloud element value on certain actions
+                    // updates Kentico Kontent element value on certain actions
                     editor.on('Paste Change input Undo Redo', function () {
                         setValue(editor.getContent());
                     });

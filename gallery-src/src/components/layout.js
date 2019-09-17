@@ -23,7 +23,7 @@ class Layout extends React.Component {
             }}>
             <ButtonLink
               text="Submit new element"
-              to="https://github.com/Kentico/custom-element-samples#feedback--contributing"
+              to="https://github.com/Kentico/kontent-custom-element-samples#feedback--contributing"
             />
           </div>
           <h1

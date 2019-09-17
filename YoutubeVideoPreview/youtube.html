@@ -5,9 +5,9 @@
     <title>Youtube video</title>
     <!-- Include jQuery library -->
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-	
+
     <!-- Include the Custom Elements API-->
-    <script src="https://app.kenticocloud.com/js-api/custom-element.js"></script>
+    <script src="https://app.kontent.ai/js-api/custom-element.js"></script>
 
     <!-- Custom element CSS styles -->
     <style>
@@ -22,8 +22,8 @@
 			margin: 0;
 			padding: 10px;
 		}
-		
-		#youtube_input {		
+
+		#youtube_input {
 			padding: 10px;
 			margin-bottom: 1em;
 			width: calc(100% - 25px);
@@ -50,7 +50,7 @@
 	</div>
 
     <!-- Custom logic of the Custom element -->
-    <script>      
+    <script>
         function updateDisabled(disabled) {
             if (disabled) {
                 $('.disabled_overlay').show();
@@ -58,9 +58,9 @@
             else {
                 $('.disabled_overlay').hide();
             }
-        }		
-      
-        function showVideo(value,width,height) {			
+        }
+
+        function showVideo(value,width,height) {
 			if (value) {
 				$("#youtube_video").html('<object width="'+width+'" height="'+height+'" data="https://www.youtube.com/embed/'+value+'"></object>');
 			}
@@ -68,52 +68,52 @@
 				$("#youtube_video").html('');
 			}
 			updateSize();
-        }	
-      
-        function findID(url) {			
+        }
+
+        function findID(url) {
 			url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
 			return (url[2] !== undefined) ? url[2].split(/[^0-9a-z_\-]/i)[0] : url[0];
         }
-      
+
         function setup(value,width,height) {
 			$("#youtube_input").val(value);
 			showVideo(value,width,height);
 			$("#youtube_input").on('input', function() {
 				var id = findID($(this).val());
-				CustomElement.setValue(id);  
+				CustomElement.setValue(id);
 				$("#youtube_input").val(id);
-				showVideo($(this).val(),width,height); 
+				showVideo($(this).val(),width,height);
 			});
         }
-      
+
         function updateSize() {
-            // Update the Custom element height in the Kentico Cloud UI
+            // Update the Custom element height in the Kentico Kontent UI
             const height = parseInt($("html").height());
             CustomElement.setHeight(height);
         }
-      
+
         function initCustomElement() {
             try {
                 CustomElement.init((element, _context) => {
 				  var width = (element.config?element.config.width:"400");
 				  var height = (element.config?element.config.height:"300");
                   // Setup with initial value and disabled state
-                  setup(element.value,width,height);  
+                  setup(element.value,width,height);
                   updateDisabled(element.disabled);
                   updateSize();
                 });
                 // React when the disabled state changes (e.g. when publishing the item)
                 CustomElement.onDisabledChanged(updateDisabled);
             } catch (err) {
-                // Initialization with the Custom elements API failed 
-                // (page displayed outside of the Kentico Cloud UI)
+                // Initialization with the Custom elements API failed
+                // (page displayed outside of the Kentico Kontent UI)
                 console.error(err);
                 updateDisabled(true);
             }
         }
-      
+
         initCustomElement();
-      
+
     </script>
 </body>
 </html>

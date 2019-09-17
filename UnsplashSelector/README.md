@@ -1,6 +1,6 @@
-# Unsplash Selector Kentico Cloud Custom Element
+# Unsplash Selector Kentico Kontent Custom Element
 
-This is a [custom element](https://developer.kenticocloud.com/docs/integrating-content-editing-features) for [Kentico Cloud](https://kenticocloud.com) that allows users to search and select high-quality, royalty-free images from [Unsplash](https://unsplash.com/).
+This is a [custom element](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features) for [Kentico Kontent](https://kontent.ai) that allows users to search and select high-quality, royalty-free images from [Unsplash](https://unsplash.com/).
 
 ![Unsplash Selector](Unsplash-Selector-Fade.jpg)
 
@@ -9,7 +9,7 @@ This is a [custom element](https://developer.kenticocloud.com/docs/integrating-c
 You can get started quickly using the currently version currently deployed to GitHub Pages. I do not recommend using this for anything other than **quick testing only**.
 
 1. [Get Unsplash application keys](#getting-unsplash-application-keys)
-1. Follow the instructions in the [Kentico Cloud documentation](https://developer.kenticocloud.com/docs/integrating-content-editing-features#section-3-displaying-a-custom-element-in-kentico-cloud) to add the element to a content model using <https://kentico.github.io/custom-element-samples/UnsplashSelector/> as the `Hosted code URL` and pass your Unsplash keys via the [JSON Parameters configuration](#json-parameters)
+1. Follow the instructions in the [Kentico Kontent documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrating-your-own-content-editing-features#a-3--displaying-a-custom-element-in-kentico-kontent) to add the element to a content model using <https://kentico.github.io/kontent-custom-element-samples/UnsplashSelector/> as the `Hosted code URL` and pass your Unsplash keys via the [JSON Parameters configuration](#json-parameters)
 
 ## Source and Development
 
@@ -84,5 +84,5 @@ The JSON object returned from the Deliver API matches that of a single photo sea
 1. Create a new application
 1. Open the application and scroll down to find the keys
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/custom-element-samples/UnsplashSelector?pixel)
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kontent-custom-element-samples/UnsplashSelector?pixel)
 

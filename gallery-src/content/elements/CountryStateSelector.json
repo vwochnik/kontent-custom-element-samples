@@ -1,6 +1,6 @@
 {
   "title": "Country State Selector",
   "description": "Country and state selector is a drop down selector which allows users to select country and state (if country has any).",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/CountryStateSelector/CountryStateSelector.png",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/CountryStateSelector"
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/CountryStateSelector/CountryStateSelector.png",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/CountryStateSelector"
 }

@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
         <SEO
           title="Custom element list"
           keywords={[
-            `Kentico Cloud`,
+            `Kentico Kontent`,
             `caas`,
             `javascript`,
             `extensions`,
@@ -78,7 +78,7 @@ query {
   description
     }
   }
-    
+
   allElementsJson(sort: {fields: title}) {
     edges {
       node {

@@ -2,5 +2,5 @@
   "title": "WYSIWYG Summernote",
   "description": "This KC custom element is based on the Summernote rich text editor. It allows you to switch to the Source code mode to edit or see the HTML markup!",
   "thumbnailUrl": "https://amend.cz/wysiwyg/summernote2.gif",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/WYSIWYG-Summernote"
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/WYSIWYG-Summernote"
 }

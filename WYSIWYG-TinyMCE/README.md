@@ -1,12 +1,12 @@
 # WYSIWYG TinyMCE
 
-This Kentico Cloud custom element is based on the [TinyMCE](https://www.tiny.cloud/) WYSIWYG text editor.
+This Kentico Kontent custom element is based on the [TinyMCE](https://www.tiny.cloud/) WYSIWYG text editor.
 
-You can test it by configuring https://kentico.github.io/custom-element-samples/WYSIWYG-TinyMCE/tiny-source.html url for your custom element.
+You can test it by configuring https://kentico.github.io/kontent-custom-element-samples/WYSIWYG-TinyMCE/tiny-source.html url for your custom element.
 
 ![Tiny preview](tiny-preview.png)
 
-Example output (html): 
+Example output (html):
 ```json
  "elements": {
       "tiny": {
@@ -29,4 +29,4 @@ Once you have the account, generate your own script and use it instead of
 
 You can adjust the tiny's configuration function as you see fit inside `initializeEditor` function. For a list of configuration options refer to [https://www.tiny.cloud/docs/configure/integration-and-setup/](https://www.tiny.cloud/docs/configure/integration-and-setup/)
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/custom-element-samples/WYSIWYG-TinyMCE?pixel)
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kontent-custom-element-samples/WYSIWYG-TinyMCE?pixel)

@@ -1,8 +1,8 @@
 # Components element
 
-In Kentico Cloud there is linked items element as well as linked items as a part of the rich text. Then there are components as a part of the rich text, but there are components missing as a stand-alone element so editors can't create as many components as they need with no related items created.
+In Kentico Kontent there is linked items element as well as linked items as a part of the rich text. Then there are components as a part of the rich text, but there are components missing as a stand-alone element so editors can't create as many components as they need with no related items created.
 
-You can test it by configuring https://kentico.github.io/custom-element-samples/Components/components.html url for your custom element.
+You can test it by configuring https://kentico.github.io/kontent-custom-element-samples/Components/components.html url for your custom element.
 
 You can combine any number of HTML5 inputs -> text, textarea, color, date, time, number, radio, checkbox, password and range.
 
@@ -149,8 +149,8 @@ Response:
       ]
    },
    {
-      "url":"https://kenticocloud.com",
-      "text":"Kentico Cloud",
+      "url":"https://kontent.ai",
+      "text":"Kentico Kontent",
       "target":[
 
       ]
@@ -186,5 +186,5 @@ Response:
 ]
 ```
 
-![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/custom-element-samples/Components?pixel)
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/Kentico/kontent-custom-element-samples/Components?pixel)
 

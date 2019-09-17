@@ -5,11 +5,11 @@
     <title>Components</title>
     <!-- Include jQuery library -->
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-	
+
     <!-- Include the Custom Elements API-->
-    <script src="https://app.kenticocloud.com/js-api/custom-element.js"></script>
+    <script src="https://app.kontent.ai/js-api/custom-element.js"></script>
 	<link rel="stylesheet" href="./custom-element.css" />
-	
+
     <!-- Custom element CSS styles -->
     <style>
 		/* We recommended you always set margin to zero to avoid problems when displaying the element in UI */
@@ -35,27 +35,27 @@
 			height: 100%;
 			opacity: 0.1;
 		}
-		
+
 		.component-object {
 			display: none;
 			padding: 10px;
 			margin: 10px 0;
 			border: 1px dashed #CCC;
 		}
-		
+
 		.delete-object {
 			float: right;
 			cursor: pointer;
 		}
-		
+
 		.delete-object:hover {
 			color: #0071b8;
 		}
-		
+
 		.object-input {
 			padding: 5px;
 		}
-		
+
 		.object-input label {
 			font-size: 0.9em;
 			display: block;
@@ -75,14 +75,14 @@
 		.object-input textarea {
 			height: 150px;
 		}
-		
+
     </style>
 </head>
 <body>
 	<div class="disabled_overlay"></div>
 	<div id="components_wrapper"></div>
 	<button id="add_object" class="btn btn--secondary"></button>
-<script>	
+<script>
 	var mainObject = [];
 	var objectName = "";
 
@@ -94,37 +94,37 @@
 			$('.disabled_overlay').hide();
 		}
 	}
-	
-	function setup(value, name, inputs) {	
+
+	function setup(value, name, inputs) {
 		objectName = name;
 		$('#add_object').text("Add "+objectName);
-		
+
 		if (checkUniqueNames(inputs)) {
 			mainObject = inputs;
 		}
 		else {
-			showError('Your input configuration contains duplicated names. Please name your inputs uniquely.');  
+			showError('Your input configuration contains duplicated names. Please name your inputs uniquely.');
 		}
-		
+
 		if (value) {
 			loadObjects(value);
 		}
-		
+
 		$("#add_object").click(function(e) {
 			addNewObject(null);
-		});		
+		});
 	}
-  
+
 	function updateSize() {
 		var height = 300;
 		try {
-			height = parseInt($("html").height());		
+			height = parseInt($("html").height());
 		} catch (err) {
 			console.error(err);
 		}
 		CustomElement.setHeight(height);
 	}
-  
+
 	function initCustomElement() {
 		try {
 			CustomElement.init((element, _context) => {
@@ -135,30 +135,30 @@
 					if (element.config.inputs) inputs = element.config.inputs;
 				}
 				else {
-					showError('There is no input configuration specified for this component. Please check the documentation.');  
+					showError('There is no input configuration specified for this component. Please check the documentation.');
 				}
 				// Setup with initial value and disabled state
-				setup(element.value, name, inputs);  
+				setup(element.value, name, inputs);
 				updateDisabled(element.disabled);
 				updateSize();
 			});
 			// React when the disabled state changes (e.g. when publishing the item)
 			CustomElement.onDisabledChanged(updateDisabled);
 		} catch (err) {
-			// Initialization with the Custom elements API failed 
-			// (page displayed outside of the Kentico Cloud UI)
+			// Initialization with the Custom elements API failed
+			// (page displayed outside of the Kentico Kontent UI)
 			console.error(err);
 			updateDisabled(true);
 		}
 	}
-  
-	initCustomElement();	
-	
-	function addNewObject(passedObject) {		
+
+	initCustomElement();
+
+	function addNewObject(passedObject) {
 		if (mainObject) {
 		var id = generateHash();
 		var output = '<div id="'+id+'" class="component-object"><div class="icon-delete delete-object" objectid="'+id+'" title="Delete '+objectName+'"></div>';
-			for (var x = 0; x < mainObject.length; x++) {	
+			for (var x = 0; x < mainObject.length; x++) {
 				var input = '<div class="object-input">';
 				var name = mainObject[x].name;
 				var type = mainObject[x].type;
@@ -166,7 +166,7 @@
 					if (mainObject[x].label) input += '<label for="'+name+id+'">'+mainObject[x].label+'</label>';
 					var value = (passedObject?passedObject[name]:"");
 					switch (type) {
-						case 'text':						
+						case 'text':
 							input += '<input type="'+mainObject[x].type+'" id="'+name+id+'" name="'+name+'" placeholder="'+(mainObject[x].placeholder?mainObject[x].placeholder:"")+'" '+(value?'value="'+value+'"':"")+' />';
 							break;
 						case 'textarea':
@@ -203,21 +203,21 @@
 							input += '<input type="'+mainObject[x].type+'" id="'+name+id+'" name="'+name+'" '+(value?'value="'+value+'"':"")+' />';
 							break;
 						default:
-							showError('There is no such an input type. Please check documentation for allowed types.'); 
+							showError('There is no such an input type. Please check documentation for allowed types.');
 					}
 				}
 				else {
-					showError('Please specify the "name" and "type" parameters for all of your inputs.');    
+					showError('Please specify the "name" and "type" parameters for all of your inputs.');
 				}
 				output += input + "</div>";
 			}
 			output += '</div>';
 			$("#components_wrapper").append(output);
 			$("#"+id).fadeIn(500);
-			
+
 			updateSize();
-			
-			$('.delete-object, input, textarea').off();			
+
+			$('.delete-object, input, textarea').off();
 			$('input[type="text"], input[type="password"], input[type="number"], input[type="date"], input[type="time"], input[type="url"], textarea').on('input', function() {
 				saveObjects();
 			});
@@ -229,16 +229,16 @@
 			});
 		}
 	}
-	
+
 	function saveObjects() {
 		var jsonData = [];
-		$(".component-object").each(function() {	
+		$(".component-object").each(function() {
 			var listName = "";
 			var jsonObject = {};
 			var _this = this;
 			$(_this).find("input, textarea").each(function() {
 				if ($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox") {
-					if (listName != $(this).attr("name")) {		
+					if (listName != $(this).attr("name")) {
 						if ($(this).attr("type")=="checkbox") {
 							jsonObject[$(this).attr("name")] = [];
 						}
@@ -248,7 +248,7 @@
 						listName = $(this).attr("name");
 					}
 					if (this.checked) {
-						if ($(this).attr("type")=="checkbox") {							
+						if ($(this).attr("type")=="checkbox") {
 							jsonObject[$(this).attr("name")].push($(this).val());
 						}
 						else {
@@ -257,7 +257,7 @@
 						console.log($(this).val());
 					}
 				}
-				else {					
+				else {
 					jsonObject[$(this).attr("name")] = $(this).val();
 				}
 			});
@@ -265,14 +265,14 @@
 		});
 		CustomElement.setValue(JSON.stringify(jsonData));
 	}
-	
-	function loadObjects(value) {	
+
+	function loadObjects(value) {
 		var jsonData = JSON.parse(value);
 		for (var x = 0; x < jsonData.length; x++) {
 			addNewObject(jsonData[x]);
 		}
 	}
-	
+
 	function deleteObject(object) {
 		$("#"+$(object).attr("objectid")).fadeOut("slow", function(){
 			$(this).remove();
@@ -280,7 +280,7 @@
 			saveObjects();
 		});
 	}
-	
+
 	function checkUniqueNames(inputs) {
 		var names = [];
 		for (var x = 0; x < inputs.length; x++) {
@@ -291,13 +291,13 @@
 		}
 		return true;
 	}
-	
+
 	function generateHash() {
 		return Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
 	}
-	
+
 	function showError(message) {
-		$("#components_wrapper").html('<span class="item-status item-status--failed">'+message+'</span>'); 
+		$("#components_wrapper").html('<span class="item-status item-status--failed">'+message+'</span>');
 		$("button").hide();
 	}
 

@@ -1,6 +1,6 @@
 {
   "title": "Markdown",
   "description": "Markdown editor is a WYSIWYG Custom element which allows users to write formatted text using SimpleMDE. In this sample element, you can find examples of setting dynamic height and reacting on the window ‘resize’ events. When the element is disabled, the editor is set to the read-only mode.",
-  "thumbnailUrl": "https://kentico.github.io/custom-element-samples/Markdown/markdown.gif",
-  "readmeUrl": "https://github.com/Kentico/custom-element-samples/tree/master/Markdown"
+  "thumbnailUrl": "https://kentico.github.io/kontent-custom-element-samples/Markdown/markdown.gif",
+  "readmeUrl": "https://github.com/Kentico/kontent-custom-element-samples/tree/master/Markdown"
 }
