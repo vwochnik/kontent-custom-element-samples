@@ -235,6 +235,6 @@ exports.handler = (event, context, callback) => {
 
 The element itself dosnt store anything, it just renders a button for the synchronization.
 
-### Restriction
+### Restrictions
 
 TODO: Multiple choice element can be synchronized only if the element was created by cloning
