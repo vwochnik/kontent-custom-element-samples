@@ -238,4 +238,4 @@ The element itself dosnt store anything, it just renders a button for the synchr
 ### Restrictions
 
   - TODO: Multiple choice and taxonomy elements can be synchronized only if the element was created by cloning
-  - TODO: Asset and linked items elements can't synchronize items created after cloning
+  - TODO: Asset and modular content can't be synchronized if created after cloning
