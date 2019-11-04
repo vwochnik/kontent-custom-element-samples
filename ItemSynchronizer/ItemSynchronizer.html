@@ -87,6 +87,7 @@
 	var sourceTypeID = '';
 	var targetTypeID = '';
 	var elements = [];
+	var skipTypes = ["asset", "modular_content"];
 	
 	
 	function setup() {	
@@ -333,9 +334,11 @@
 		for (var x = 0; x < targetTypes.length; x++) {
 			if (targetTypes[x].id==targetTypeID) {
 				for (var y = 0; y < targetTypes[x].elements.length; y++) {
-					var element = findSourceElement(targetTypes[x].elements[y].codename);
-					if (!jQuery.isEmptyObject(element)) {
-						elements2sync.push(element);
+					if (!skipTypes.includes(targetTypes[x].elements[y].type)) {
+						var element = findSourceElement(x,y);
+						if (!jQuery.isEmptyObject(element)) {
+							elements2sync.push(element);
+						}
 					}
 				}
 			}
@@ -343,12 +346,13 @@
 		return elements2sync;
 	}
 	
-	function findSourceElement(codename) {
+	function findSourceElement(targetx,targety) {
+		var codename = targetTypes[targetx].elements[targety].codename;
 		for (var x = 0; x < sourceTypes.length; x++) {
 			if (sourceTypes[x].id==sourceTypeID) {
 				for (var y = 0; y < sourceTypes[x].elements.length; y++) {	
 					if (sourceTypes[x].elements[y].codename==codename) {
-						var value = findElementValue(sourceTypes[x].elements[y].id);
+						var value = findElementValue(x,y,targetx,targety);
 						if (value) {
 							var element = {
 								"element": {
@@ -365,10 +369,37 @@
 		return null;
 	}
 	
-	function findElementValue(id) {
+	function findElementValue(sourcex,sourcey,targetx,targety) {
+		var id = sourceTypes[sourcex].elements[sourcey].id;
 		for (var x = 0; x < elements.length; x++) {
 			if (elements[x].element.id==id) {
-				return elements[x].value;
+				var value = elements[x].value;
+				if (value) {
+					if (targetTypes[targetx].elements[targety].type=="multiple_choice") {
+						for (var y = 0; y < elements[x].value.length; y++) {
+							value = JSON.parse(JSON.stringify(value).replace(elements[x].value[y].id, matchMultipleChioceIDs(sourcex,sourcey,targetx,targety,elements[x].value[y].id)));
+						}					
+					}	
+					return value;
+				}
+			}
+		}
+		return null;
+	}
+	
+	function matchMultipleChioceIDs(sourcex,sourcey,targetx,targety,value) {
+		for (var x = 0; x < sourceTypes[sourcex].elements[sourcey].options.length; x++) {
+			if (sourceTypes[sourcex].elements[sourcey].options[x].id==value) {
+				return findMultipleChioceTargetID(targetx,targety,sourceTypes[sourcex].elements[sourcey].options[x].codename);				
+			}
+		}
+		return null;
+	}
+	
+	function findMultipleChioceTargetID(targetx,targety,codename) {
+		for (var x = 0; x < targetTypes[targetx].elements[targety].options.length; x++) {
+			if (targetTypes[targetx].elements[targety].options[x].codename==codename) {
+				return targetTypes[targetx].elements[targety].options[x].id;				
 			}
 		}
 		return null;
