@@ -133,6 +133,18 @@ const request = (queryStringParameters, headers, body) => {
                 method = 'PUT';
                 body_data = '';
                 token = targetAuthorizationHeaderValue;
+                break;                
+            case "sourcetaxonomies":
+                endpoint = path+sourceProject+'/taxonomies';
+                method = 'GET';
+                body_data = '';
+                token = sourceAuthorizationHeaderValue;
+                break;
+            case "targettaxonomies":
+                endpoint = path+targetProject+'/taxonomies';
+                method = 'GET';
+                body_data = '';
+                token = targetAuthorizationHeaderValue;
                 break;
         }
     }
