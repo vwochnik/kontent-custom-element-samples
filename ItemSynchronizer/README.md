@@ -249,4 +249,4 @@ The element itself dosnt store anything, it just renders a button for the synchr
 
 ### Restrictions
 
-  - TODO: Asset and modular content can't be synchronized if created after cloning
+  - TODO: Asset and modular content elements are not synced
