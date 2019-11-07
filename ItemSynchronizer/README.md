@@ -4,6 +4,8 @@ This custom element allows you to synchronize an item across multiple projects/e
 
 ![screenshot](http://amend.cz/syncItems2.gif)
 
+The synchronization is based on codenames. To perform sucessful synchronization the content type code name of an item you want to synchronize has to match as well as codenames of content type elements or taxonomies. If you are not cloning project make sure you created object with matching codenames.
+
 ## Configuration
 
 ```json
@@ -12,7 +14,6 @@ This custom element allows you to synchronize an item across multiple projects/e
     "sourceProject": "1f33698f-a270-4b2d-90c5-9658a99c3140"
 }
 ```
-
 You need to specify the `serviceURL` parameter in order to enable the element to synchronize changes (the lamda function shown below). The `sourceProject` parameter needs to be there to tell the element the direction (from source project to target):
 
 Since you can't provide your CM API tokens directly to the custom element, you need to create some server layer to do the CM request for you. You can follow our recommendation for creating a lambda function for this purpose:
