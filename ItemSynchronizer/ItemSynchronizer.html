@@ -83,6 +83,8 @@
 	var serviceURL = '';
 	var sourceTypes = {};
 	var targetTypes = {};
+	var sourceTaxonomies = {};
+	var targetTaxonomies = {};
 	var workflow = {};
 	var sourceTypeID = '';
 	var targetTypeID = '';
@@ -133,8 +135,38 @@
 			success: function (data) {
 				if (data.types.length>0) {
 					targetTypes = data.types;
-					getSourceItem();
+					getSourceTaxonomies();
 				}
+			}
+		});			
+	}
+	
+	function getSourceTaxonomies() {
+		var url = serviceURL+"?ep=sourcetaxonomies";
+				
+		$.ajax({
+			url: url,
+			type: "GET",
+			success: function (data) {
+				if (data.length>0) {
+					sourceTaxonomies = data;
+				}
+				getTargetTaxonomies();
+			}
+		});			
+	}
+	
+	function getTargetTaxonomies() {
+		var url = serviceURL+"?ep=targettaxonomies";
+				
+		$.ajax({
+			url: url,
+			type: "GET",
+			success: function (data) {
+				if (data.length>0) {
+					targetTaxonomies = data;
+				}
+				getSourceItem();
 			}
 		});			
 	}	
@@ -379,7 +411,16 @@
 						for (var y = 0; y < elements[x].value.length; y++) {
 							value = JSON.parse(JSON.stringify(value).replace(elements[x].value[y].id, matchMultipleChioceIDs(sourcex,sourcey,targetx,targety,elements[x].value[y].id)));
 						}					
-					}	
+					}
+					if (targetTypes[targetx].elements[targety].type=="taxonomy") {
+						var sourceTaxonomyIndex = getTaxonomyIndex("source",sourceTypes[sourcex].elements[sourcey].codename);
+						var targetTaxonomyIndex = getTaxonomyIndex("target",sourceTypes[sourcex].elements[sourcey].codename);
+						if (sourceTaxonomyIndex>=0 && targetTaxonomyIndex>=0) {
+							for (var y = 0; y < elements[x].value.length; y++) {
+								value = JSON.parse(JSON.stringify(value).replace(elements[x].value[y].id, matchTaxonomyIDs(sourceTaxonomyIndex,targetTaxonomyIndex,elements[x].value[y].id)));
+							}
+						}
+					}					
 					return value;
 				}
 			}
@@ -400,6 +441,34 @@
 		for (var x = 0; x < targetTypes[targetx].elements[targety].options.length; x++) {
 			if (targetTypes[targetx].elements[targety].options[x].codename==codename) {
 				return targetTypes[targetx].elements[targety].options[x].id;				
+			}
+		}
+		return null;
+	}
+	
+	function getTaxonomyIndex(source,codename) {
+		var taxonomy = (source=="source"?sourceTaxonomies:targetTaxonomies);
+		for (var x = 0; x < taxonomy.length; x++) {
+			if (taxonomy[x].codename==codename) {
+				return x;				
+			}
+		}
+		return null;
+	}
+	
+	function matchTaxonomyIDs(sourceTaxonomyIndex,targetTaxonomyIndex,value) {
+		for (var x = 0; x < sourceTaxonomies[sourceTaxonomyIndex].terms.length; x++) {
+			if (sourceTaxonomies[sourceTaxonomyIndex].terms[x].id==value) {		
+				return findTaxonomyTargetID(targetTaxonomyIndex,sourceTaxonomies[sourceTaxonomyIndex].terms[x].codename);				
+			}
+		}
+		return null;
+	}
+	
+	function findTaxonomyTargetID(targetTaxonomyIndex,codename) {
+		for (var x = 0; x < targetTaxonomies[targetTaxonomyIndex].terms.length; x++) {
+			if (targetTaxonomies[targetTaxonomyIndex].terms[x].codename==codename) {
+				return targetTaxonomies[targetTaxonomyIndex].terms[x].id;				
 			}
 		}
 		return null;
