@@ -420,7 +420,10 @@
 								value = JSON.parse(JSON.stringify(value).replace(elements[x].value[y].id, matchTaxonomyIDs(sourceTaxonomyIndex,targetTaxonomyIndex,elements[x].value[y].id)));
 							}
 						}
-					}					
+					}	
+					if (targetTypes[targetx].elements[targety].type=="rich_text") {
+						value = processRichText(value);
+					}				
 					return value;
 				}
 			}
@@ -472,6 +475,12 @@
 			}
 		}
 		return null;
+	}
+	
+	function processRichText(value) {
+		value = value.replace(/<figure.*data-asset-id="([^"]*)"[^>]*><img[^>]*><\/figure>/g, "<p>[figure id=$1]</p>");
+		value = value.replace(/<object.*data-type="([^"]*).*data-id="([^"]*)[^>]*><\/object>/g, "<p>[$1 id=$2]</p>");
+		return value;
 	}
   
 	function updateSize() {
