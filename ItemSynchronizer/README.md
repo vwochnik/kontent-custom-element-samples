@@ -10,7 +10,7 @@ The synchronization is based on codenames. To perform sucessful synchronization 
 
 ```json
 {
-    "serviceURL": "https://co4gdvtnha.execute-api.eu-central-1.amazonaws.com/default/syncFunction",
+    "serviceURL": "https://co7gdvtnha.execute-api.eu-central-1.amazonaws.com/default/syncFunction",
     "sourceProject": "1f33698f-a270-4b2d-90c5-9658a99c3140"
 }
 ```
