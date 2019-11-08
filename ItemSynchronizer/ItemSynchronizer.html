@@ -478,7 +478,7 @@
 	}
 	
 	function processRichText(value) {
-		value = value.replace(/<figure.*data-asset-id="([^"]*)"[^>]*><img[^>]*><\/figure>/g, "<p>[figure id=$1]</p>");
+		value = value.replace(/<figure.*data-asset-id="([^"]*)"[^>]*><img[^>]*><\/figure>/g, "<p>[asset id=$1]</p>");
 		value = value.replace(/<object.*data-type="([^"]*).*data-id="([^"]*)[^>]*><\/object>/g, "<p>[$1 id=$2]</p>");
 		return value;
 	}
