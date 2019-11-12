@@ -1,6 +1,10 @@
 # Item synchronizer
 
-This custom element allows you to synchronize an item across multiple projects/environments. 
+This custom element allows you to synchronize an item across multiple projects/environments.
+
+## Disclamer
+
+The Item synchronizer is a proof of concept and not finished yet. The security of this element is based on an origin of located source file. If the url of your lambda function url and the origin of your custom element leak, the attacker can update or publish items of your target project.
 
 ![screenshot](http://amend.cz/syncItems2.gif)
 
@@ -26,7 +30,7 @@ In **Step 2: Configuring your Lambda function**, use the following keys and valu
   - `TARGET_PROJECT`: `<target project ID>`
   - `SOURCE_BEARER_TOKEN`: `<source Content Management API key>`
   - `TARGET_BEARER_TOKEN`: `<target Content Management API key>`
-  - `ACCESS_CONTROL_ALLOW_ORIGIN`: `<main your custom element is hosted on>`
+  - `ACCESS_CONTROL_ALLOW_ORIGIN`: `<domain your custom element is hosted on>`
   
 ![screenshot](http://amend.cz/synchronizer_configuration.png)
 
