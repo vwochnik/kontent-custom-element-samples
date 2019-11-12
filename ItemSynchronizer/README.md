@@ -6,6 +6,8 @@ This custom element allows you to synchronize an item across multiple projects/e
 
 The Item synchronizer is a proof of concept and not finished yet. The security of this element is based on an origin of located source file. If the url of your lambda function url and the origin of your custom element leak, the attacker can update or publish items of your target project.
 
+## Description
+
 ![screenshot](http://amend.cz/syncItems2.gif)
 
 The synchronization is based on codenames. To perform sucessful synchronization the content type code name of an item you want to synchronize has to match as well as codenames of content type elements or taxonomies. If you are not cloning project make sure you created object with matching codenames.
