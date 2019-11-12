@@ -4,7 +4,7 @@ This custom element allows you to synchronize an item across multiple projects/e
 
 ## Disclamer
 
-The Item synchronizer is a proof of concept and not finished yet. The security of this element is based on an origin of located source file. If the url of your lambda function url and the origin of your custom element leak, the attacker can update or publish items of your target project.
+The Item synchronizer is a proof of concept and not finished yet. The security of this element is based on an origin of located source file. If the url of your lambda function url and the origin of your custom element leak (eg. an editor from some Reviewer role who - shouldn't have na access to this element configuration - inspects the custom element or watches the network communication), the attacker can update or publish items of your target project.
 
 ## Description
 
