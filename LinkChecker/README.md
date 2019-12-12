@@ -26,7 +26,7 @@ You can test it by configuring https://kentico.github.io/kontent-custom-element-
 
 Since all custom elements need to run on https but not all links starts with this protocol or don't even support this protocol, you can't make requests directly from this element due to browser security protection.
 Please create a simple request service that takes the url parameter from the POST request and makes another call to this url and sends back the return code of such request.
-A sample of such requester:
+A php sample of such a requester:
 
 ```php
 <?php
