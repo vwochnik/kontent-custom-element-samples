@@ -4,7 +4,7 @@ This custom element allows you to synchronize an item across multiple projects/e
 
 ## Disclamer
 
-Always add this element to separate content group and give permissions to this group only to user you trust (Project manager role recommended) otherwise the editor could inspect this element and fake requests to the lambda service.
+Always add this element to separate content group and give permissions to this group only to users you trust (Project manager role recommended) otherwise the editor could inspect this element and fake requests to the lambda service.
 
 ## Description
 
@@ -252,7 +252,7 @@ exports.handler = (event, context, callback) => {
 };
 ```
 
-The element itself dosnt store anything, it just renders a button for the synchronization.
+The element itself doesn't store anything, it just renders a button for the synchronization.
 
 ### Restrictions
 
