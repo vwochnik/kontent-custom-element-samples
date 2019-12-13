@@ -6,7 +6,7 @@ This custom element allows you to synchronize an item across multiple projects/e
 
 Always add this element to separate content group and give permissions to this group only to users you trust (Project manager role recommended) otherwise the editor could inspect this element and fake requests to the lambda service.
 
-## Description
+| :warning: Disclaimer |
 
 ![screenshot](http://amend.cz/syncItems2.gif)
 
